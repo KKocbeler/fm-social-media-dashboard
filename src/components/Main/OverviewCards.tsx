@@ -74,7 +74,7 @@ const OverviewCards = () => {
         <article className='overview-cards'>
             {
                 overviewData.map(item => (
-                    <section className='overview-card'>
+                    <section className='overview-card' key={item.id}>
                         <div className="overview-card__top">
                             <p>{item.title}</p>
                             <img src={item.icon} alt={item.title} />

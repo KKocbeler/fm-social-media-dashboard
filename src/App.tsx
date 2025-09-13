@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.scss'
 import OverviewCards from './components/Main/OverviewCards';
 import TotalCards from './components/Main/TotalCards';
@@ -6,7 +6,12 @@ import Navbar from './components/Navbar/Navbar';
 
 
 function App() {
-    const [isDark, setIsDark] = useState(false)
+    const [isDark, setIsDark] = useState<boolean>(true);
+
+    useEffect(() => {
+        setIsDark(true);
+    }, []);
+
     const toggleTheme = () => {
        const root = document.documentElement;
        if(root.getAttribute("data-theme") === "dark") {
