@@ -1,0 +1,37 @@
+.overview-cards {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+
+  .overview-card {
+    display: grid;
+    padding: 1rem;
+    background-color: var(--card-bg);
+    border-radius: .5rem;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    .overview-card__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .overview-card__bottom {
+      margin-top: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .big-text {
+        font-size: 1.8rem;
+      }
+      .overview-percents {
+          display: flex;
+          align-items: center;
+          gap: .5rem;
+          img {
+          width: 1rem; height: auto;
+          object-fit: cover;
+          }
+      }
+    }
+  }
+}
