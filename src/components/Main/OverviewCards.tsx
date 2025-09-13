@@ -71,6 +71,8 @@ const overviewData = [
 
 const OverviewCards = () => {
     return (
+        <section className="overview">
+        <h2 className="overview-title">Overview - Today</h2>
         <article className='overview-cards'>
             {
                 overviewData.map(item => (
@@ -90,6 +92,7 @@ const OverviewCards = () => {
                 ))
             }
         </article>
+        </section>
     )
 }
 
